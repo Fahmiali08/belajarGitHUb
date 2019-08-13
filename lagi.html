@@ -1,0 +1,112 @@
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic' rel='stylesheet'>
+<link rel="stylesheet" media="all" href="https://static.codepen.io/assets/global/global-c06c9ade2eac3f3842bb17c39f85cfd4cff0059953fdbc708b16b7dfb8971197.css" />
+<link rel="stylesheet" media="screen" href="https://static.codepen.io/assets/packs/css/everypage-2a9ecec1.css" />
+<link rel="stylesheet" media="all" href="https://static.codepen.io/assets/page/page-4e78fb5d6b2bb4feca304b467f6eb4618b675d3af1567cfffb0ecf50fdc9d805.css" />
+<link rel="stylesheet" media="screen" href="https://static.codepen.io/assets/accounts/signup-fd296655d63c6871ebbc69f57cf23487ee1e58e781e1f55636deef5dd129cde4.css" />
+<link rel="stylesheet" media="screen" href="https://static.codepen.io/assets/accounts/form-2b1c0e868b037ec1a2e9bb00509b89914979b03576fbfa3b9f173cce4b605a16.css" />
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+<div class="login-wrap">
+<header class="login-header">
+<h2 class="little-big-header">Log in!</h2>
+</header>
+<div class="flex-grid">
+<div class="login-half left">
+<div class="login-area">
+<form class="login-form top-label-form" id="login-login-form" action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="mKsT5us0gnDVX6kJBdTh8lqe4Eah/pB1w2aF1ssAg9+n44YOg/eSudQaugQn4q/CyQlngZMPe3cRrBfM2MvoBQ==" />
+<div id="login-email" class="field">
+<label for="login-email-field">Username or Email</label>
+<input type="text" name="email" id="login-email-field" value="" required="required" />
+</div>
+<div id="login-password" class="field">
+<label for="login-password-field">Password</label>
+<input name="password" required="required" type="password" id="login-password-field_" />
+</div>
+<div>
+<input type="hidden" id="login-type" name="login-type" value="fullpage">
+</div>
+<div id="login-error"></div>
+<div>
+<label class="spacing-label">&nbsp;</label>
+<button id="log-in-button" class="recaptcha-trigger-button button green action-button expand-right">
+<span class="label">Log in</span>
+<span class="spinner"></span>
+</button>
+&nbsp;&nbsp;
+<a href="#" id="forgot-password-link" class="forgot-password-link">
+Forgot Password?
+</a>
+</div>
+</form>
+<form class="forgot-password-form login-form" id="forgot-password-form" action="#0">
+<h3>Reset Your Password</h3>
+<div class="field">
+<label for="forgot-email">Username Or Email</label>
+<input type="text" id="forgot-email" name="forgot-email" placeholder="your@email.com" required>
+</div>
+<div class="field">
+<input id="forgot-email-btn" type="submit" value="Send Password Reset Email" class="button button-medium">
+</div>
+<div id="sent-message">
+<div id="sent-message-message"></div>
+</div>
+</form>
+</div>
+</div>
+<div class="login-divider">
+<div class="bar bar-top"></div>
+<span class="login-or">OR</span>
+<div class="bar bar-bottom"></div>
+</div>
+<div class="login-half right">
+<div class="module social-auth-errors" id="login-social-auth-errors"></div>
+<div class="login-social-buttons">
+<a id="login-with-twitter" href="/auth/twitter" data-network="Twitter" class="button social-account-button twitter-button button-fullwidth">
+<svg class="icon-twitter" width="26" height="26">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+</svg>
+<span>Log In with Twitter</span>
+</a>
+<a id="login-with-github" href="/auth/github" data-network="Github" class="button github-button social-account-button button-fullwidth">
+<svg class="icon-github" width="26" height="26">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#octocat"></use>
+</svg>
+<span>Log In with GitHub</span>
+</a>
+<a id="login-with-facebook" href="/auth/facebook" data-network="Facebook" class="button social-account-button facebook-button button-fullwidth">
+<svg class="icon-facebook" width="26" height="26">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
+</svg>
+<span>Log In with Facebook</span>
+</a>
+</div>
+</div>
+</div>
+<div class="signup-callout">
+Need an account? <a href="/accounts/signup/user/free">Sign up now!</a>
+</div>
+</div>
+<div id="popup-overlay" class="overlay popup-overlay"></div>
+<div id="modal-overlay" class="overlay modal-overlay"></div>
+<div id="react-popups" class="react-popups"></div>
+<noscript>
+
+  <input type="checkbox" class="modal-closing-trick" id="modal-closing-trick">
+
+  <div class="overlay noscript-overlay" style="display: block;"></div>
+
+  <div class="modal modal-message group modal-warning">
+
+    <div class="modal-title">CodePen doesn't work very well without JavaScript.</div>
+
+    <p>We're all for progressive enhancement, but CodePen is a bit unique in that it's all about writing and showing front end code, including JavaScript. It's required to use most of the features of CodePen.</p>
+
+    <p>Need to know how to enable it? <a href="http://enable-javascript.com/" target="_blank" rel="noopener">Go here.</a></p>
+
+    <label class="button button-medium" for="modal-closing-trick">Close this, use anyway.</label>
+
+  </div>
+
+</noscript>
